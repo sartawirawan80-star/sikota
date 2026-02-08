@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>SiKOTA - Sistem Informasi Layanan Kota Terpadu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>SiKOTA</h1>
+    <p>Sistem Informasi Layanan Kota Terpadu</p>
+</header>
+
+<nav>
+    <button onclick="showSection('login')">Login</button>
+    <button onclick="showSection('pengajuan')">Pengajuan</button>
+    <button onclick="showSection('tracking')">Tracking</button>
+    <button onclick="showSection('pengaduan')">Pengaduan</button>
+</nav>
+
+<section id="login" class="card">
+    <h2>Login / Registrasi</h2>
+    <input type="text" placeholder="NIK">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</section>
+
+<section id="pengajuan" class="card hidden">
+    <h2>Pengajuan Layanan</h2>
+    <select>
+        <option>Surat Domisili</option>
+        <option>Surat Keterangan Usaha</option>
+        <option>Surat Pengantar</option>
+    </select>
+    <input type="text" placeholder="Nama Lengkap">
+    <input type="file">
+    <button onclick="submitPengajuan()">Kirim Pengajuan</button>
+</section>
+
+<section id="tracking" class="card hidden">
+    <h2>Tracking Status</h2>
+    <input type="text" placeholder="Nomor Pengajuan">
+    <button onclick="cekStatus()">Cek Status</button>
+    <p id="status"></p>
+</section>
+
+<section id="pengaduan" class="card hidden">
+    <h2>Pengaduan Masyarakat</h2>
+    <input type="text" placeholder="Judul Pengaduan">
+    <textarea placeholder="Deskripsi Pengaduan"></textarea>
+    <input type="file">
+    <button onclick="kirimPengaduan()">Kirim</button>
+</section>
+
+<footer>
+    <p>© 2026 SiKOTA | Demo e-Government</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
